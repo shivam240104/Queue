@@ -9,8 +9,7 @@ public class Reverse {
             s.push(q.remove());
         }
         while(!s.isEmpty()){
-            System.out.println(s.peek());
-            s.pop();
+            q.add(s.pop());
         }
      }
     public static void main(String[] args) {
@@ -22,6 +21,10 @@ public class Reverse {
         q.add(5);
         q.add(6);
         reverse(q);
+
+        while(!q.isEmpty()){
+            System.out.println(q.remove()+" ");
+        }
        
     }
 }
